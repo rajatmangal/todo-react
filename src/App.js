@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Todos from './Todos';
 import Form from './addForm';
+import "./index.css";
 
 class App extends Component {
   state = {
