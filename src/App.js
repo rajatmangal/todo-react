@@ -17,12 +17,20 @@ class App extends Component {
       todos: todos
     })
   }
+  addTodo = (content) => {
+    console.log(content);
+    content.id = Math.random();
+    let newTodos = [...this.state.todos, content];
+    this.setState({
+      todos: newTodos
+    })
+  }
   render() {
     return (
       <div className="todo-app container">
         <h1 className="center blue-text">Todo's</h1>
         <Todos todos={this.state.todos} deleteTodo={this.deleteTodo}/>
-        <Form />
+        <Form addTodo={this.addTodo} />
       </div>
     );
   }
